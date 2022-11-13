@@ -1,0 +1,122 @@
+/* Change Brand Font */
+.nav-item {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* Change Navigation Color */
+ .navbar #myMenu .custom-nav .nav-item a {
+    color: black;
+}
+
+/* Change Navigation Hover Color */
+.navbar #myMenu .custom-nav .nav-item a:hover {
+    color: dimgray;
+}
+
+/*Make Header Image Responsive */
+.back-image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    border-bottom: 0px;
+    margin-top: 55px;
+}
+
+a {
+  color: chocolate;  
+}
+
+a:hover {
+    color:sandybrown;
+}
+
+@keyframes mymove 
+{
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(360deg);}
+}
+
+@keyframes spin
+{
+
+     0% {transform: rotateZ(0deg);} 
+         100%  {transform:rotateZ(360deg); } 
+}
+.x {
+    animation: mymove 5s linear 1;
+
+}
+.sp { 
+    animation: spin 2s linear infinite;
+    
+}
+
+.fam {
+    font-family: 'Nosifer', cursive;
+    font-size: 42px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: lightslategrey;
+  font-size: 20px;
+}
+
+.last 
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.f{
+    font-family: 'Indie Flower', cursive;
+}
+
+.menu {
+
+}
+
+.y {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+p 
+{ 
+    font-family: 'Nanum Myeongjo', serif;
+
+    font-size: 17px;
+    font-weight: bold;
+}
+
+body{
+    background-image: url(images/bg7.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.imgsh{
+    box-shadow: 12px 12px 29px #555;;
+}
+
+.im{
+    margin: 20px auto;
+}
+
+
+@keyframes spinY
+{
+
+     0% {transform: rotateY(0deg);} 
+         100%  {transform:rotateY(360deg); } 
+}
+
+.sz { 
+    animation: spinY 2s linear infinite;
+    
+}
+

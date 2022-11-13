@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+
+      <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+     <title>Form1</title>
+    
+	    <style type="text/css">
+		   
+		  body {
+		      font-family:'Indie Flower', cursive;
+        font-size:180%;
+        font-weight: bold;
+        background-image: none;
+        background: grey;
+        }
+    
+			  
+		  input {
+               padding:5px 5px 12px 5px;
+               font-size:25px;
+			   border-radius:5px;
+			   border:1px grey solid;
+			   width:320px;
+			   }
+			label {
+                position:relative;
+                top:12px;
+                width:200px;
+                float:left;
+               }
+ 			
+            #wrapper {
+            	width:550px;
+                margin:0 auto;
+				}
+			.form-element {
+               
+               margin-bottom:10px;
+            }	
+            
+           #submitbutton {
+            width:130px;
+            margin-left:50px;
+             }
+
+            #resetbutton {
+            width:130px;
+            margin-left:20px;
+             }
+
+          #errorMessage{
+            color:red;
+            font-size:90% !important;
+          }
+           
+          #successMessage {
+             color:green;
+             font-size:90% !important;
+             display:none;
+             margin-bottom:20px;
+          }
+          .cont{
+             width:70%;
+            margin: auto;
+
+          }
+          
+		  </style>
+	      <script src="jquery.min.js"></script>
+	</head>
+	    
+     <body>
+	 <div class="container">
+       <form action="mail.php" method="POST">
+       <div class="cont text-center">
+      <div class="row">
+        <div class="col-12">
+      <h2 class="text-center mt-2">Contact Us:</h2>
+       </div> </div>
+      <div id ="wrapper" class="mt-4">
+      <div id ="successMessage">You have done it!</div>
+      <div id ="errorMessage"></div>
+     
+          <div class="row">
+            <div class="col-12">
+	   <div class ="form-element ">
+      	   <label for="username">User Name</label>
+		   <input type="text" name="username" id="username" placeholder="eg. Your Name">
+		   </div>
+          </div> </div>
+       
+       
+       <div class="row">
+        <div class="col-12">
+           <div class ="form-element">
+      	   <label for="email">Email</label>
+		   <input type="text" name="email" id="email" placeholder="eg. yourname@gmail.com">
+		   </div>
+         
+      </div> </div>
+       
+       <div class="row">
+        <div class="col-12">
+		      <div class ="form-element">
+      	   <label for="phone">Telephone</label>
+		   <input type="text" name="phone" id="phone" placeholder="eg. 0123456789">
+		   </div>
+          
+      </div> </div>
+       
+       <div class="row">
+        <div class="col-12">
+					<div class ="form-element">
+      	   <label for="subject">Subject</label>
+		   <input type="text" name="subject" id="subject" placeholder="eg. Consult">
+		   </div>
+      </div> </div>
+       
+       
+       <div class="row">
+        <div class="col-12">
+		    <div class="form-element">
+            <label for="textarea" class="pb-2">Message</label>
+            <textarea class=" form-control rounded-0" id="description" name="message"
+             rows="6"placeholder="eg....."></textarea>
+          </div>
+        </div> </div>
+        
+		   <div class ="form-element">
+        <input type="submit" id="submitbutton" value="Send">
+        <input type="reset" id="resetbutton" value="Clear">
+		   </div>
+       </div>
+       </div>
+      </form>
+	  </div>
+		 <script type="text/javascript">
+            function isEmail(email) {
+              var regex=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
+              
+              return regex.test(email);
+                }
+           
+          $("#submitbutton").click(function() {
+            var errorMessage = "";
+            var fieldMissing = "";
+			
+			if($("#username").val()=="") {
+             fieldMissing += "<br>User Name";
+			 }
+			
+		  if($("#email").val()=="") {
+             fieldMissing += "<br>Email";
+			 }
+		   
+		   if($("#phone").val()=="") {
+             fieldMissing += "<br>Telephone";
+			 }
+		   
+		   if($("#subject").val()=="") {
+             fieldMissing += "<br>Subject";
+			 }
+		   
+		   if($("#description").val()=="") {
+             fieldMissing += "<br>Description";
+			 }
+			 
+		if(fieldMissing != "") {
+          errorMessage += "<p>The following field(s) are missing" +fieldMissing;
+            }
+
+        if(isEmail($("#email").val()) == false) {
+          errorMessage += "<p>Your email address is not valid</p>";
+           }		  
+		   
+		   if($.isNumeric($("#phone").val()) == false) {
+          errorMessage += "<p>Your phone number is not numeric</p>";
+           }	
+		   
+		   if($("#password").val() != $("#passwordconfirm").val()) {
+          errorMessage += "<p>Your passwords don't match</p>";
+           }
+
+           
+/*
+		 if(errorMessage != "") {
+            $("#errorMessage").html(errorMessage);
+          }
+           
+           else {
+            $("#successMessage").show();
+            $("#errorMessage").hide();
+           }
+
+           */
+    });
+	 </script>
+       
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+    	

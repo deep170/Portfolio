@@ -1,0 +1,66 @@
+.nav-item {
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+body{
+    background-image: url('images1/BG.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    border-bottom: 0px;
+    margin-top: 55px;
+}
+
+.navbar #myMenu .custom-nav .nav-item a {
+    color: silver;
+}
+
+.navbar #myMenu .custom-nav .nav-item a:hover {
+    color:goldenrod
+}
+
+.imgH a:hover{
+   color: slateblue;
+}
+
+@keyframes mymove 
+{
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(360deg);}
+}
+
+@keyframes spin
+{
+
+     0% {transform: rotateZ(0deg);} 
+         100%  {transform:rotateZ(360deg); } 
+}
+.x {
+    animation: mymove 5s linear 1;
+
+}
+.sp { 
+    animation: spin 2s linear infinite;
+    
+}
+
+.fam {
+    font-family: 'Metal Mania', cursive;
+    font-size: 80px;
+    color:goldenrod;
+}
+
+a{
+    color:silver;
+
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+    color: goldenrod;
+}

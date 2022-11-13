@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178390913-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178390913-1');
+</script>
+
+		<meta charset="utf-8">
+		<title>Registration</title>
+		<link rel="icon" type="image/png" href="images1/icon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+
+<!--
+<?php 
+if(isset($_POST['submit'])){
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$dob = $_POST['dob'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$phone2 = $_POST['phone2'];
+$address = $_POST['address'];
+$college = $_POST['college'];
+$course = $_POST['course'];
+$year = $_POST['year'];
+$branch = $_POST['branch'];
+$linkedin = $_POST['linkedin'];
+$fb = $_POST['fb'];
+$insta = $_POST['insta'];
+$question = $_POST['question'];
+if(isset($_POST['fb']))
+{
+    $fb = $_POST['fb'];
+}
+else
+{
+    $fb = "none";
+}
+if(isset($_POST['linkedin']))
+{
+    $linkedin = $_POST['linkedin'];
+}
+else
+{
+    $linkedin = "none";
+}
+if(isset($_POST['insta']))
+{
+    $insta = $_POST['insta'];
+}
+else
+{
+    $insta = "none";
+}
+if(isset($_POST['phone2']))
+{
+    $phone2 = $_POST['phone2'];
+}
+else
+{
+    $phone2 = "none";
+}
+
+if(isset($_POST['question']))
+{
+    $question = $_POST['question'];
+}
+else
+{
+    $question = "none";
+}
+
+$db_user="id13573102_deep";
+$db_pass="Deep@9424643562";
+$db_name="id13573102_registration";
+$db_servername = "localhost";
+
+//echo "<script>alert('st1')</script>";
+
+//$conn = mysqli_connect($db_servername, $db_user, $db_pass, $db_name);
+$db = new PDO('mysql:host=localhost;dbname=' .$db_name. ';charset=utf8',$db_user,$db_pass);
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//echo "<script>alert('st2')</script>";
+
+$sql = "INSERT INTO form_data(firstname, lastname, dob, email, phone, phone2, address, 
+                                        college, course, year, branch, linkedin, fb, insta, question)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+$data = $db->prepare($sql);
+//echo "<script>alert('st1')</script>";
+$result = $data->execute([$firstname, $lastname, $dob, $email, $phone, $phone2, $address, $college, $course, $year, $branch, $linkedin, $fb, $insta, $question]);
+//echo "<script>alert('st2')</script>";
+if($result)
+{
+   echo "<script>alert('Registered Successfully !!');window.location.href='https://deepagrawal.tech';</script>";
+}
+else
+		{
+			echo "Problem inserting record......Please try after sometime";
+		}
+}
+//else {header("Location: https://www.google.com");exit;}
+?>  -->
+
+		<div class="wrapper">
+			<div class="inner">
+				<form action="" method="POST">
+					<h3>Register Here</h3>
+
+					<div class="text-center">
+						<img class="logospin" src="images/logo.png"> </div>
+
+						<p></p>
+
+					<label class="form-group">
+						<input type="text" class="form-control" name="firstname" style="color: rgb(235, 220, 16);" required>
+						<span>First Name</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="lastname" style="color: rgb(235, 220, 16);" required>
+						<span>Last Name</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group" style="color: #0d99d7;">Date of Birth
+						<input type="date" class="form-control" name="dob" style="color: rgb(235, 220, 16);" required>
+					</label>
+					<label class="form-group">
+						<input type="email" class="form-control" name="email" style="color: rgb(235, 220, 16);"  required>
+						<span for="">Email</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="tel" id="phone"class="form-control" name="phone" style="color: rgb(235, 220, 16);" required>
+						<span>Contact Number</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="tel" class="form-control" name="phone2" style="color: rgb(235, 220, 16);">
+						<span>Alternative Number</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="address" style="color: rgb(235, 220, 16);" required>
+						<span>Address</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="college" style="color: rgb(235, 220, 16);" required>
+						<span>College Name</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="course" style="color: rgb(235, 220, 16);" required>
+						<span>Course</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<select class="form-control" name="year" id="year1" name="year" style="color: rgb(235, 220, 16);" required>
+							<option></option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						  </select>
+						<span>Year</span>
+						<span class="border"></span>
+				
+					</label>
+					<label class="form-group">
+						<select class="form-control" name="branch"  id="branch1" style="color: rgb(235, 220, 16);" name="branch" required>
+							<option></option>
+							<option   value="CSE"> Computer Science Engineering </option>
+							<option   value="IT"> Information Technology </option>
+							  <option   value="EC"> Electronics and Communication </option>
+							  <option   value="EE"> Electrical Engineering </option>
+							  <option   value="CE"> Civil Engineering </option>
+								<option   value="ME"> Mechanical Engineering </option>
+								<option   value="CHE"> Chemical Engineering </option>
+								<option   value="AUTO"> Automobile Engineering </option>
+								  <option  value="PCT"> PCT</option>
+								</select>
+						<span>Branch</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="linkedin" style="color: rgb(235, 220, 16);" >
+						<span>LinkedIn handle (Optional)</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="fb" style="color: rgb(235, 220, 16);">
+						<span>Facebook handle (Optional)</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="insta" style="color: rgb(235, 220, 16);">
+						<span>Instagram handle (Optional)</span>
+						<span class="border"></span>
+					</label>
+
+
+					<label class="form-group" >
+						<input type="text" class="form-control" name="question" style="color: rgb(235, 220, 16);">
+						<span>Your Question</span>
+						<span class="border"></span> 
+					</label>
+					<button type="submit" name="submit">Submit 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<script>
+			// For blocking shortcut buttons
+		  
+		  document.onkeydown = function(e) {
+			  if(e.keyCode == 123) {
+			   return false;
+			  }
+			  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+			   return false;
+			  }
+			  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+			   return false;
+			  }
+			  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+			   return false;
+			  }
+		  
+			  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+			   return false;
+			  }      
+		   }
+		   // For blocking Right click on mouse
+		  
+		   document.oncontextmenu = document.body.oncontextmenu = function() {return false; }
+		  </script> 
+		
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
